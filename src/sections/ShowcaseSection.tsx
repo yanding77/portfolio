@@ -30,7 +30,7 @@ const ShowcaseSection = () => {
                     <div className="first-project-wrapper" ref={project1Ref} >
                         <div className='image-wrapper' >
                             <a href="https://github.com/yanding77/mass-general" target="_blank">
-                            <img src="/images/project4.png" alt="Hosptial"/>
+                            <img src="./images/project4.png" alt="Hosptial"/>
                             </a>
                         </div>
                         <div className="text-content">
@@ -46,14 +46,14 @@ const ShowcaseSection = () => {
                         <div className="project" ref={project2Ref}>
                             <div className="image-wrapper bg-[#ebd0ac]">
                                 <a href="https://github.com/yanding77/QR" target="_blank">
-                                <img src='images/project5.png' alt="Restaurant"/>
+                                <img src='./images/project5.png' alt="Restaurant"/>
                                 </a>
                             </div>
                             <h2>QR Restaurant Ordering App</h2>
                         </div>
                         <div className="project" ref={project3Ref}>
                             <div className="image-wrapper bg-[#f0e5d9]">
-                                <img src='images/project6.png' alt="Spreadsheet"/>
+                                <img src='./images/project6.png' alt="Spreadsheet"/>
                             </div>
                             <h2>Spreadsheet tool for creating, editing, and managing data</h2>
                         </div>
