@@ -28,8 +28,10 @@ const ShowcaseSection = () => {
                 <div className="showcaselayout">
                     {}
                     <div className="first-project-wrapper" ref={project1Ref} >
-                        <div className='image-wrapper'>
+                        <div className='image-wrapper' >
+                            <a href="https://github.com/yanding77/mass-general" target="_blank">
                             <img src="/images/project4.png" alt="Hosptial"/>
+                            </a>
                         </div>
                         <div className="text-content">
                             <h2>The UMass General Brigham navigation website helps patients and visitors find their way with ease.</h2>
@@ -43,7 +45,9 @@ const ShowcaseSection = () => {
                     <div className='project-list-wrapper overflow-hidden'>
                         <div className="project" ref={project2Ref}>
                             <div className="image-wrapper bg-[#ebd0ac]">
+                                <a href="https://github.com/yanding77/QR" target="_blank">
                                 <img src='images/project5.png' alt="Restaurant"/>
+                                </a>
                             </div>
                             <h2>QR Restaurant Ordering App</h2>
                         </div>

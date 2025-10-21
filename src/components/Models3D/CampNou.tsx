@@ -9,7 +9,7 @@ import {Ecuador} from "./Ecuador.jsx";
 
 const CampNou = () => {
     const isTablet = useMediaQuery({query: '(max-width: 1024px)'});
-    const isMobile = useMediaQuery({query: '(max-width: 768px)'});
+    const isMobile = useMediaQuery({query: '(max-width: 768)'});
     return(
         <Canvas camera={{
             position: [5,5,-20]
