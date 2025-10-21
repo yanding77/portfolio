@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Jugger(props) {
-  const { nodes, materials } = useGLTF('/models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.Front_Piece_Mat} />
@@ -21,5 +21,5 @@ export function Jugger(props) {
   )
 }
 
-useGLTF.preload('/models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
+useGLTF.preload('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
 

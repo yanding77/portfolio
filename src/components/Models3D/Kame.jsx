@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Kame(props) {
-  const { nodes, materials } = useGLTF('/models/kame_house-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/kame_house-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.island_grass_0.geometry} material={materials.grass} position={[0.003, -0.03, 0.007]} scale={0.011} />
@@ -36,4 +36,4 @@ export function Kame(props) {
   )
 }
 
-useGLTF.preload('/models/kame_house-transformed.glb')
+useGLTF.preload('./models/kame_house-transformed.glb')

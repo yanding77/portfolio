@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Stadium(props) {
-  const { nodes, materials } = useGLTF('/models/camp_nou_stadium.glb')
+  const { nodes, materials } = useGLTF('./models/camp_nou_stadium.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -133,4 +133,4 @@ export function Stadium(props) {
   )
 }
 
-useGLTF.preload('/models/camp_nou_stadium.glb')
+useGLTF.preload('./models/camp_nou_stadium.glb')

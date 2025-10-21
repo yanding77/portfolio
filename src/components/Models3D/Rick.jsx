@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Rick(props) {
-  const { nodes, materials } = useGLTF('/models/rick_rick_and_morty-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/rick_rick_and_morty-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_2.geometry} material={materials.Material1} position={[-0.306, -0.003, 0.315]} rotation={[-Math.PI / 2, 0, 0]} />
@@ -20,4 +20,4 @@ export function Rick(props) {
   )
 }
 
-useGLTF.preload('/models/rick_rick_and_morty-transformed.glb')
+useGLTF.preload('./models/rick_rick_and_morty-transformed.glb')

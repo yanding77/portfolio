@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Goku(props) {
-  const { nodes, materials } = useGLTF('/models/goku.glb')
+  const { nodes, materials } = useGLTF('./models/goku.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_2.geometry} material={materials['Scene_-_Root']} position={[-0.019, 0, -0.013]} rotation={[-Math.PI / 2, 0, 2.999]} />
@@ -19,4 +19,4 @@ export function Goku(props) {
   )
 }
 
-useGLTF.preload('/models/goku.glb')
+useGLTF.preload('./models/goku.glb')

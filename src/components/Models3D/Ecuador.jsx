@@ -13,7 +13,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Ecuador(props) {
   const group = React.useRef()
-  const { nodes, materials, animations } = useGLTF('/models/animated_ecuadorian_flag-transformed.glb')
+  const { nodes, materials, animations } = useGLTF('./models/animated_ecuadorian_flag-transformed.glb')
   const { actions, names } = useAnimations(animations, group)
 
 useEffect(() => {
@@ -36,4 +36,4 @@ useEffect(() => {
   )
 }
 
-useGLTF.preload('/models/animated_ecuadorian_flag-transformed.glb')
+useGLTF.preload('./models/animated_ecuadorian_flag-transformed.glb')
