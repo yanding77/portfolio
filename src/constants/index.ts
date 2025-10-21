@@ -142,8 +142,8 @@ const expCards = [
         review:
             "Working with Yanding has been beneficial for our restaurant. He built a web application that allows our guests to order directly from their tables using QR codes. Thanks to his work, we’ve seen a noticeable improvement in efficiency " +
             "and our staff can focus more on customer service rather than manual entry.",
-        imgPath: "/images/Balsa.png",
-        logoPath: "/images/logos/balsi.png",
+        imgPath: "/images/logos/balsam.png",
+        logoPath: "/images/logos/balsita.png",
         title: "Full Stack Developer",
         date: "February 2024 - April 2024",
         responsibilities: [

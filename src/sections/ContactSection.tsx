@@ -1,6 +1,6 @@
 import TitleHeader from "../components/TitleHeader.tsx";
 import ContactExperience from "../components/Models3D/ContactExperience.tsx";
-import {useRef, useState} from "react";
+import {type ChangeEvent, type FormEvent, useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
@@ -13,12 +13,16 @@ const ContactSection = () => {
 
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) =>{
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
 
         setLoading(true);
 
         try {
+            if (!formRef.current) {
+                setLoading(false);
+                return;
+            }
             await emailjs.sendForm(
                 import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
@@ -37,7 +41,7 @@ const ContactSection = () => {
             setLoading(false)
         }
     }
-    const HandleChange = (e) => {
+    const HandleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = e.target;
         setFormData({
             ...formData,
@@ -83,7 +87,7 @@ const ContactSection = () => {
                                 name="message"
                                 placeholder="Your message"
                                 value={formData.message}
-                                rows = "5"
+                                rows = {5}
                                 onChange={HandleChange}
                                 required></textarea>
                             </div>

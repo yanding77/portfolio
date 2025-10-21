@@ -1,4 +1,6 @@
-const Button = ({text, className, id}) => {
+import type {ButtonProps} from "../constants/types.ts";
+
+const Button = ({text, className, id}: ButtonProps) => {
     return (
         <a
             onClick={(e)=>{

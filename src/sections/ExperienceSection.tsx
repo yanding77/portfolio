@@ -11,14 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const ExperienceSection = () => {
     useGSAP(()=>{
         gsap.utils.toArray('.timeline-card').forEach((card) => {
-            gsap.from(card, {
+            gsap.from(card as Element, {
                 xPercent: -100,
                 opacity: 0,
                 transformOrigin: 'left left',
                 duration:  1,
                 ease: 'power2.inOut',
                 scrollTrigger: {
-                    trigger: card,
+                    trigger: card as Element,
                     start: 'top 80%'
                 },
             });
@@ -40,13 +40,13 @@ const ExperienceSection = () => {
             });
 
         gsap.utils.toArray('.expText').forEach((text) => {
-            gsap.from(text, {
+            gsap.from(text as Element, {
                 opacity: 0,
                 xPercent: 0,
                 duration:  1,
                 ease: 'power2.inOut',
                 scrollTrigger: {
-                    trigger: text,
+                    trigger: text as Element,
                     start: 'top 60%'
                 },
             });
