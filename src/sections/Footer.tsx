@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="flex flex-col justify-center">
                     <p className="text-center md:text-end">
-                        © {new Date().getFullYear()} Yanding Mario Yin Sovenis
+                        © {new Date().getFullYear()} Yanding Mario Yin Sovenis. All rights reserved
                     </p>
 
                 </div>
