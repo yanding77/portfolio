@@ -34,7 +34,7 @@ const ShowcaseSection = () => {
                             </a>
                         </div>
                         <div className="text-content">
-                            <h2>The UMass General Brigham navigation website helps patients and visitors find their way with ease.</h2>
+                            <h2>The Massachusetts General Brigham navigation website helps patients and visitors find their way with ease.</h2>
                             <p className="text-white-50 md:text-xl">
                                 An App built with React, Express and PostgreSQL for a fast, user-friendly experience.
                             </p>
