@@ -51,7 +51,7 @@ const ContactSection = () => {
     return (
         <section id='contact' className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
-                <TitleHeader title="Let's Get in Touch" sub={"✉️ Contact Information"}/>
+                <TitleHeader title="Let's Get in Touch" sub={"✉️ yandingmario@gmail.com"}/>
 
                 <div className="mt-16 grid-12-cols">
                     {}

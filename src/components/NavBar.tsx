@@ -19,6 +19,7 @@ const Navbar = () => {
                 <a className="logo" href="#hero">
                     YY
                 </a>
+
                 <nav className="desktop">
                     <ul>
                         {navLinks.map(({link, name})=>(

@@ -43,16 +43,27 @@ const Hero = () => {
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                             Hey, I'm Yanding Mario, a developer from Ecuador with a passion for code.
                         </p>
+
                         <Button
+                            id = 'cv'
                             className="md:w-80 md:h-16 w-60 h-12"
-                            id="button"
                             text="See my Work"/>
+                        <a
+                            href="./yandingyin.pdf"
+                            className="text-white-50 relative z-10"
+                            target='_blank'
+                            download='./yandingyin.pdf'>
+
+                            <div className="inner">
+                                <span>Download My CV</span>
+                            </div>
+                        </a>
 
                     </div>
                 </header>
                 {}
                 <figure>
-                    <div className="hero-3d-layout">
+                    <div className="hero-3d-layout ">
                         <CampNou/>
                     </div>
                 </figure>
