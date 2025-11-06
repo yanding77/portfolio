@@ -61,7 +61,8 @@ const Hero = () => {
                 </header>
                 {}
                 <figure>
-                    <div className="hero-3d-layout ">
+
+                    <div className="hero-3d-layout">
                         <CampNou/>
                     </div>
                 </figure>

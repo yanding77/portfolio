@@ -2,8 +2,10 @@ import TitleHeader from "../components/TitleHeader.tsx";
 import ContactExperience from "../components/Models3D/ContactExperience.tsx";
 import {type ChangeEvent, type FormEvent, useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
+import {useMediaQuery} from "react-responsive";
 
 const ContactSection = () => {
+    const isMobile = useMediaQuery({query: '(max-width: 1024)'});
     const formRef = useRef(null);
     const [formData, setFormData] = useState({
         name: "",
@@ -80,7 +82,7 @@ const ContactSection = () => {
                                 onChange={HandleChange}
                                 required/>
                             </div>
-                            <div className="mb-6">
+                            { isMobile ?  (<div className="mb-6">
                                 <label htmlFor="message">Message</label>
                                 <textarea
                                 id="message"
@@ -90,12 +92,12 @@ const ContactSection = () => {
                                 rows = {5}
                                 onChange={HandleChange}
                                 required></textarea>
-                            </div>
+                            </div>) : null}
                             <button
                             type="submit" disabled={loading}>
                             <div className="cta-button group">
                                 <div className="bg-circle"/>
-                                    <p className="text">{loading ? 'Sending..':'Send Message'}</p>
+                                    <p className="text">{loading ? 'Sending..':'Send Info'}</p>
                                     <div className="arrow-wrapper">
                                         <img src='./images/arrow-down.svg' alt="arrow"/>
 

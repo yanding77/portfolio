@@ -28,12 +28,10 @@ import {Naruto} from './Naruto.jsx';
 
 
 import {OrbitControls} from "@react-three/drei";
-import {useMediaQuery} from "react-responsive";
 
 
 
 const ContactExperience = () => {
-    const isMobile = useMediaQuery({query: "(max-width: 1024px)", });
 
     return (
         <Canvas camera={{
@@ -43,7 +41,6 @@ const ContactExperience = () => {
             <directionalLight intensity={3} position={[10,20,0]}/>
 
             <OrbitControls
-                enableZoom={!isMobile}
                 enablePan={false}
                 maxDistance={25}
                 minDistance={15}
