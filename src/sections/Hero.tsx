@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="hero-layout">
                 {}
                 <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-                    <div className="flex flex-col gap-7">
+                    <div className="flex flex-col gap-7 items-start">
                         <div className="hero-text">
                             <h1>
                                 Transforming
@@ -50,13 +50,11 @@ const Hero = () => {
                             text="See my Work"/>
                         <a
                             href="./yandingyin.pdf"
-                            className="text-white-50 relative z-10"
+                            className="text-white-50 relative z-10 inline-block"
                             target='_blank'
                             download='./yandingyin.pdf'>
 
-                            <div className="inner">
                                 <span>Download My CV</span>
-                            </div>
                         </a>
 
                     </div>
