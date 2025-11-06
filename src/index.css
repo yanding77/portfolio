@@ -99,7 +99,7 @@ section {
     }
 
     .hero-3d-layout {
-        @apply xl:w-[70%] xl:h-full w-full h-[40vh] min-h-[20vh] absolute xl:-top-20 top-70 xl:-right-20 right-0;
+        @apply xl:w-[70%] xl:h-full w-full h-[40vh] min-h-[30vh] absolute xl:-top-20 top-70 xl:-right-20 right-0;
 
     }
 
