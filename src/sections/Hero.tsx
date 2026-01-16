@@ -49,7 +49,7 @@ const Hero = () => {
                             className="md:w-80 md:h-16 w-60 h-12"
                             text="See my Work"/>
                         <a
-                            href="./yandingyin.pdf"
+                            href="./Resume10.pdf"
                             className="text-white-50 relative z-10 inline-block"
                             target='_blank'
                             download='./yandingyin.pdf'>
