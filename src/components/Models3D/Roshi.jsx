@@ -10,9 +10,10 @@ Title: maestro Muten / master Roshi
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import {DRACO_URL} from "./constants.js";
 
 export function Roshi(props) {
-  const { nodes, materials } = useGLTF('./models/maestro_muten__master_roshi-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/maestro_muten__master_roshi-transformed.glb', DRACO_URL)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.corpo_hp_copy1_corpo_hp_copy1_0.geometry} material={materials.corpo_hp_copy1} position={[-0.01, 0.015, 0]} rotation={[0, 0, 0.16]} />
@@ -30,4 +31,4 @@ export function Roshi(props) {
   )
 }
 
-useGLTF.preload('./models/maestro_muten__master_roshi-transformed.glb')
+useGLTF.preload('./models/maestro_muten__master_roshi-transformed.glb', DRACO_URL)

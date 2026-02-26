@@ -12,9 +12,10 @@ import React from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+import {DRACO_URL} from "./constants.js";
 
 export function Thanos(props) {
-  const { scene } = useGLTF('./models/thanos_textured_rigged-transformed.glb')
+  const { scene } = useGLTF('./models/thanos_textured_rigged-transformed.glb', DRACO_URL)
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   return (
@@ -27,4 +28,4 @@ export function Thanos(props) {
   )
 }
 
-useGLTF.preload('./models/thanos_textured_rigged-transformed.glb')
+useGLTF.preload('./models/thanos_textured_rigged-transformed.glb', DRACO_URL)

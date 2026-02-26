@@ -124,7 +124,7 @@ const expCards = [
         imgPath: "./images/wpi.png",
         logoPath: "./images/logos/wpilogo.png",
         title: "Undergraduate Teaching Assistant",
-        date: "Aug 2024- Present",
+        date: "Aug 2025- Present",
         responsibilities: [
             "Delivered personalized one-on-one and group office hour sessions to help students across Computer Science courses.",
             "Guided students on mastering key programming concepts, algorithms, and debugging practices.",

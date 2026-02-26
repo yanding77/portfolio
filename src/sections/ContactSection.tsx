@@ -1,5 +1,4 @@
 import TitleHeader from "../components/TitleHeader.tsx";
-import ContactExperience from "../components/Models3D/ContactExperience.tsx";
 import {type ChangeEvent, type FormEvent, useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
 import {useMediaQuery} from "react-responsive";
@@ -113,7 +112,8 @@ const ContactSection = () => {
                     {}
                     <div className="xl:col-span-7  min-h-96">
                         <div className="w-full h-full hover:cursor-grab round rounded-3xl overflow-hidden">
-                        <ContactExperience />
+                            {//<ContactExperience*//
+                            }
                         </div>
                     </div>
 

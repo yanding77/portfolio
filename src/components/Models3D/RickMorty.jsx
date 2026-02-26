@@ -10,9 +10,10 @@ Title: Rick and Morty
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import {DRACO_URL} from "./constants.js";
 
 export function RickMorty(props) {
-  const { nodes, materials } = useGLTF('./models/rickmorty2-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/rickmorty2-transformed.glb', DRACO_URL)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_7.geometry} material={materials.PaletteMaterial001} />
@@ -21,4 +22,4 @@ export function RickMorty(props) {
   )
 }
 
-useGLTF.preload('./models/rickmorty2-transformed.glb')
+useGLTF.preload('./models/rickmorty2-transformed.glb', DRACO_URL)

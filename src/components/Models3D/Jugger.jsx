@@ -10,9 +10,10 @@ Title: Old Juggernog - Call of Duty Perk Machine
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import {DRACO_URL} from "./constants.js";
 
 export function Jugger(props) {
-  const { nodes, materials } = useGLTF('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb', DRACO_URL)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.Front_Piece_Mat} />
@@ -21,5 +22,5 @@ export function Jugger(props) {
   )
 }
 
-useGLTF.preload('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb')
+useGLTF.preload('./models/old_juggernog_-_call_of_duty_perk_machine-transformed.glb', DRACO_URL)
 

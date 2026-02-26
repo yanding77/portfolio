@@ -12,10 +12,11 @@ import React from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+import {DRACO_URL} from "./constants.js";
 
 export function OmniMan(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('./models/omni_man_fortnite-transformed.glb')
+  const { scene, animations } = useGLTF('./models/omni_man_fortnite-transformed.glb', DRACO_URL)
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
@@ -36,4 +37,4 @@ export function OmniMan(props) {
   )
 }
 
-useGLTF.preload('./models/omni_man_fortnite-transformed.glb')
+useGLTF.preload('./models/omni_man_fortnite-transformed.glb', DRACO_URL)

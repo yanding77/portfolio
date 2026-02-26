@@ -12,10 +12,11 @@ import React, {useEffect} from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+import {DRACO_URL} from "./constants.js";
 
 export function Naruto(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('./models/naruto_rage-transformed.glb')
+  const { scene, animations } = useGLTF('./models/naruto_rage-transformed.glb', DRACO_URL)
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
 
@@ -30,4 +31,4 @@ export function Naruto(props) {
   )
 }
 
-useGLTF.preload('./models/naruto_rage-transformed.glb')
+useGLTF.preload('./models/naruto_rage-transformed.glb', DRACO_URL)

@@ -12,10 +12,11 @@ import React, {use, useEffect} from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+import {DRACO_URL} from "./constants.js";
 
 export function Homelander(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('./models/homelander_-_the_boys-transformed.glb')
+  const { scene, animations } = useGLTF('./models/homelander_-_the_boys-transformed.glb', DRACO_URL)
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
@@ -39,4 +40,4 @@ export function Homelander(props) {
   )
 }
 
-useGLTF.preload('./models/homelander_-_the_boys-transformed.glb')
+useGLTF.preload('./models/homelander_-_the_boys-transformed.glb', DRACO_URL)

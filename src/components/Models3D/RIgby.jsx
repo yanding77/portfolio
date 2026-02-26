@@ -10,9 +10,10 @@ Title: RİGBY 3D
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import {DRACO_URL} from "./constants.js";
 
 export function Rigby(props) {
-  const { nodes, materials } = useGLTF('./models/rigby_3d-transformed.glb')
+  const { nodes, materials } = useGLTF('./models/rigby_3d-transformed.glb', DRACO_URL)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.BezierCurve_Material004_0.geometry} material={materials['Material.004']} position={[-0.011, -0.168, -1.17]} rotation={[-Math.PI / 2, 0, 0]} />
@@ -25,4 +26,4 @@ export function Rigby(props) {
   )
 }
 
-useGLTF.preload('./models/rigby_3d-transformed.glb')
+useGLTF.preload('./models/rigby_3d-transformed.glb', DRACO_URL)
